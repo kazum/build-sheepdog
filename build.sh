@@ -99,8 +99,7 @@ fi
 ./autogen.sh
 ./configure --disable-corosync --enable-debug --enable-fatal-warnings
 make
-cd tests
 
 export WD=${WORKSPACE}/results
-./check
-./check -g md -md
+./tests/functional/check
+./tests/functional/check -g md -md
