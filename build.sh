@@ -59,7 +59,7 @@ wget https://github.com/kazum/qemu/archive/master.zip -O qemu.zip > /dev/null 2>
 rm -rf qemu-master
 unzip qemu.zip > /dev/null 2>&1
 cd qemu-master
-./configure --prefix=${BUILD} > /dev/null 2>&1
+./configure --prefix=${BUILD} --target-list= > /dev/null 2>&1
 make qemu-io -j4 > build.log 2>&1
 make qemu-img -j4 > build.log 2>&1
 cp qemu-io ${BUILD}/bin/
