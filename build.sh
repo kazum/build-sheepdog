@@ -14,6 +14,11 @@ export PATH=$PATH:${BUILD}/bin
 export CFLAGS="-I ${BUILD}/include"
 export PKG_CONFIG_PATH="${BUILD}/lib/pkgconfig"
 
+if [ ! -f ${BUILD}/bin/hd ]; then
+    wget https://github.com/kazum/build-sheepdog/raw/master/hd.c
+    gcc -o ${BUILD}/bin/hd hd.c
+fi
+
 #if [ ! -f ${BUILD}/lib/pkgconfig/libffi.pc ]; then
 if [ $(pkg-config --exists libffi || echo true) ]; then
 
