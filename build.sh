@@ -6,6 +6,7 @@ uname -a
 free
 
 BUILD=${WORKSPACE}/build
+mkdir -p ${BUILD}/bin
 mkdir -p ${BUILD}/lib64
 rm -f ${BUILD}/lib
 ln -s ${BUILD}/lib64 ${BUILD}/lib
