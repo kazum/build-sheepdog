@@ -103,7 +103,7 @@ fi
 # fi
 
 ./autogen.sh
-./configure --disable-corosync --enable-debug --enable-fatal-warnings
+./configure --disable-corosync --enable-debug --enable-fatal-warnings --disable-trace
 make
 
 export WD=${WORKSPACE}/results
